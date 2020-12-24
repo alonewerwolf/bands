@@ -1,0 +1,115 @@
+<odoo>
+  <data>
+
+
+      <record model="ir.ui.view" id="bands_musicians_form">
+          <field name="name">Bands musicians: form</field>
+          <field name="model">bands.musicians</field>
+          <field name="arch" type="xml">
+              <form>
+                  <sheet>
+                      <label for="name"/> <field name="name"/>
+                      <label for="biography"/>
+                      <field name="biography"/>
+
+                      <field name="song_ids">
+                          <tree string="Songs" editable="bottom">
+                              <field name="name"/>
+                          </tree>
+                      </field>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+
+
+      <record id="action_bands_songs" model="ir.actions.act_window">
+          <field name="name">Band songs</field>
+          <field name="res_model">bands.songs</field>
+      </record>
+      <record id="bands_songs_search" model="ir.ui.view">
+          <field name="name">Band songs: search</field>
+          <field name="model">bands.songs</field>
+          <field name="arch" type="xml">
+              <search>
+                  <field name="name"/>
+                  <field name="musician_id"/>
+              </search>
+          </field>
+      </record>
+      <record id="bands_songs_list" model="ir.ui.view">
+          <field name="name">Band songs: list</field>
+          <field name="model">bands.songs</field>
+          <field name="arch" type="xml">
+              <tree string="Songs">
+                  <field name="name"/>
+                  <field name="musician_id"/>
+              </tree>
+          </field>
+      </record>
+      <record id="bands_songs_form" model="ir.ui.view">
+          <field name="name">Band songs: form</field>
+          <field name="model">bands.songs</field>
+          <field name="arch" type="xml">
+              <form>
+                  <sheet>
+                      <label for="name"/>
+                      <field name="name"/>
+                      <label for="musician_id"/>
+                      <field name="musician_id"/>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="action_bands_musicians">
+          <field name="name">Bands musicians</field>
+          <field name="res_model">bands.musicians</field>
+      </record>
+
+      <record model="ir.actions.act_window" id="action_bands_songs">
+          <field name="name">Band songs</field>
+          <field name="res_model">bands.songs</field>
+      </record>
+
+
+      <menuitem sequence="0" id="menu_bands" name="Bands"/>
+      <menuitem id="menu_bands_content" parent="menu_bands"
+                name="Bands Content"/>
+      <menuitem id="menu_bands_content_songs"
+            parent="menu_bands_content"
+            action="action_bands_songs"/>
+      <menuitem id="menu_bands_content_musicians"
+                parent="menu_bands_content"
+                action="action_bands_musicians"/>
+
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="bands.menu_1" parent="bands.menu_root"/>
+    <menuitem name="Menu 2" id="bands.menu_2" parent="bands.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="bands.menu_1_list" parent="bands.menu_1"
+              action="bands.action_window"/>
+    <menuitem name="Server to list" id="bands" parent="bands.menu_2"
+              action="bands.action_server"/>
+
+-->
+          <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="bands.action_server">
+      <field name="name">bands server</field>
+      <field name="model_id" ref="model_bands_bands"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+  </data>
+</odoo>

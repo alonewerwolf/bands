@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+
+          <record id="john" model="bands.musicians">
+            <field name="name">John Lenon</field>
+          </record>
+
+          <record id="curt" model="bands.musicians">
+            <field name="name">Curt Cobbain</field>
+          </record>
+
+          <record id="freddy" model="bands.musicians">
+            <field name="name">Freddy Mercury</field>
+          </record>
+
+<!--
+          <record id="object3" model="bands.bands">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="bands.bands">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+    </data>
+</odoo>
