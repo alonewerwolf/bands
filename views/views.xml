@@ -76,6 +76,7 @@
       <menuitem sequence="0" id="menu_bands" name="Bands"/>
       <menuitem id="menu_bands_content" parent="menu_bands"
                 name="Bands Content"/>
+      <menuitem id="menu_songs_content" parent="menu_bands"/>
       <menuitem id="menu_bands_content_songs"
             parent="menu_bands_content"
             action="action_bands_songs"/>

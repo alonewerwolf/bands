@@ -1,53 +1,1402 @@
 <odoo>
     <data>
-
-              <template id="musician_page">
-          <t t-call="website.layout">
-              <t t-set="title">Musicians</t>
-              <div class="oe_structure">
-                  <div class="container">
-                      <t t-foreach="musicians" t-as="musician">
-                          <p><a t-attf-href="/bands/{{ slug(musician) }}">
-                              <t t-esc="musician.name"/></a>
-                          </p>
-                      </t>
-                  </div>
-              </div>
-          </t>
-      </template>
-      <template id="biography">
-          <t t-call="website.layout">
-              <t t-set="title">Musicians</t>
-              <div class="oe_structure"/>
-              <div class="oe_structure">
-                  <div class="container">
-                      <h3 t-field="person.name"/>
-                      <div t-field="person.biography"/>
-                  </div>
-              </div>
-              <div class="oe_structure"/>
-          </t>
-      </template>
-
-<!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
+        <template id="uber-uns">
+            <t t-name="website.uber-uns">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+                        <section class="pt32 pb0" data-name="Title">
+                            <div class="container">
+                                <div class="row s_nb_column_fixed">
+                                    <div class="s_title pt16 pb0 col-lg-8"
+                                         style="text-align: center;">
+                                        <h1 class="s_title_default"
+                                            style="text-align: left; ">
+                                            <b>
+                                                <font style="color: rgb(57, 123, 33);">
+                                                    Über uns</font>
+                                            </b>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="s_text_block pt0 pb0"
+                                 data-name="Text block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="pt32 pb0 col-lg-8">
+                                        <p class="lead">
+                                            <b>
+                                                <font style="color: rgb(57, 123, 33);">
+                                                    <a href="/uber-uns/geschichte"
+                                                       target="_blank"
+                                                       data-original-title=""
+                                                       title=""
+                                                       aria-describedby="tooltip564621">
+                                                        Geschichte</a>
+                                                </font>
+                                                <font style="color: rgb(57, 123, 33);"/>
+                                            </b>
+                                            <br/>
+                                        </p>
+                                        <p>Die Biovum GmbH konzentriert sich
+                                            seit
+                                            Ihrer Gründung auf die Produktion
+                                        </p>
+                                        <p> und den Vertrieb von biologischen
+                                            Produkten aus Bio Eiern.<br/></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="s_text_block pt32 pb32"
+                                 data-name="Text block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="pt0 pb0 col-lg-8">
+                                        <p class="lead">
+                                            <a href="/uber-uns/philosophie"
+                                               target="_blank"> Philosophie</a>
+                                            <br/>
+                                        </p>
+                                        <p>Wir bieten unseren Kunden Sicherheit,
+                                            Qualität und Erfahrung in der </p>
+                                        <p>Vermarktung von Bio Eiern. Wir haben
+                                            im
+                                            gesamten Betriebskreislauf </p>
+                                        <p>ausschließlich Bio Produkte<br/></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="s_text_block pt0 pb0"
+                                 data-name="Text block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="pt0 pb0 col-lg-8">
+                                        <p class="lead">
+                                            <a href="/uber-uns/offene-stellen"
+                                               target="_blank"
+                                               data-original-title="" title=""
+                                               aria-describedby="tooltip677766">
+                                                Offene Stellen&amp;nbsp;</a>
+                                        </p>
+                                        <p>Wir sind ein ständig wachsender
+                                            Betrieb
+                                            in der Bio-Eierbranche und sind </p>
+                                        <p>laufend auf der Suche nach
+                                            qualifizierten
+                                            und motivierten </p>
+                                        <p>Mitarbeiter/Innen<br/></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="s_text_block pt0 pb0"
+                                 data-name="Text block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 pt32 pb0">
+                                        <p class="lead">
+                                            <a href="/uber-uns/zertifizierung"><wtf
+                                                    style="">Z</wtf>
+                                                ertifizierung</a>
+                                        </p>
+                                        <p>Um die Qualität unserer bioloigschen
+                                            Produkte, und somit eine </p>
+                                        <p>grösstmögliche Sicherheit für unsere
+                                            Kunden zu gewährleisten, beginnt
+                                            die </p>
+                                        <p>Kontrolle schon bei der Anlieferung
+                                            der Eier.<br/></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="s_text_block pt32 pb0"
+                                 data-name="Text block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="pb32 pt0 col-lg-8">
+                                        <p class="lead">
+                                            <font style="color: rgb(57, 123, 33);">
+                                                <a href="/uber-uns/partner"
+                                                   data-original-title=""
+                                                   title=""
+                                                   aria-describedby="tooltip964626"
+                                                   style="">Partner</a>
+                                            </font>
+                                        </p>
+                                        <p>Hier finden Sie einige Interessante
+                                            Links.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="s_text_block pb32 pt0"
+                                 data-name="Text block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="pb32 col-lg-8 pt0">
+                                        <p class="lead">
+                                            <a href="/uber-uns/messen">
+                                                Messen</a>
+                                        </p>
+                                        <p>Hier finden Sie einen kleinen
+                                            Überblick über die wichtigsten
+                                            deutschen </p>
+                                        <p>Messen im Lebensmittelbereich. Weiter
+                                            stellen wir auch jedes Jahr auf
+                                            der </p>
+                                        <p>Biofach in Nürnberg aus, hierzu auch
+                                            ein paar kleine
+                                            Informationen.mehr<br/></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </t>
             </t>
-          </dl>
         </template>
--->
+
+        <template id="geschichte">
+                <t t-name="website.geschichte">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="s_text_block pt32 pb32"
+                                     data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="pt32 pb32 col-lg-9">
+                                            <p class="lead">
+                                                <font style="color: rgb(57, 123, 33);">
+                                                    <b>
+                                                        <b>Geschichte</b>
+                                                    </b>
+                                                </font>
+                                                <br/>
+                                            </p>
+                                            <p style="text-align: justify;">Die
+                                                Biovum GmbH ist im Jahr 2006 auf
+                                                dem
+                                                Eggerhof in Salgen entstanden.
+                                                Gegründet wurde diese von
+                                                Philipp
+                                                Egger und der Hosberg AG.</p>
+                                            <p style="text-align: justify;">Der
+                                                Eggerhof ist schon seit 1979
+                                                Mitglied beim Bioland-Verband.
+                                                Der
+                                                Betrieb sowie auch die Biovum
+                                                GmbH
+                                                wirtschaften auch heute noch
+                                                nach
+                                                ökologischen Grundsätzen und
+                                                sind
+                                                Mitglied im Bioland-Verband.</p>
+                                            <p style="text-align: justify;">1999
+                                                begannen die Eggers Ihren
+                                                Betrieb
+                                                mit Milchviehaltung Getreide und
+                                                Gemüsebau zu erweitern. Hierzu
+                                                wurde
+                                                eine Stallung für Bio-Legehennen
+                                                errichtet und bezogen. Auch hier
+                                                galt die Prämisse „artgerechte
+                                                Tierhaltung nach ökologischen
+                                                Grundsätzen“.</p>
+                                            <p style="text-align: justify;">
+                                                2005-2006 Errichtung eines
+                                                weiteren
+                                                Legehennenstalls und Gründung
+                                                der
+                                                Biovum GmbH</p>
+                                            <p style="text-align: justify;">
+                                                2006-2010 Gewinnung von
+                                                verschiedenen
+                                                Bio-Legehennenhaltern
+                                                zur Erweiterung der
+                                                Vermarktung.</p>
+                                            <p style="text-align: justify;">
+                                                Heute
+                                                ist die Biovum GmbH ein
+                                                wichtiger
+                                                Vermarkter für Bioland-Eier und
+                                                Bioland-Flüssigeiprodukte.
+                                                Getreu
+                                                unserer Überzeugung vermarkten
+                                                wir
+                                                ausschließlich qualitativ
+                                                hochwertige Bio Produkte aus
+                                                tiergerechter Produktion. Wir
+                                                versuchen unserer Aufgabe als
+                                                Bindeglied zwischen
+                                                Legehennenhalter
+                                                und Kunde gerecht zu werden.
+                                                Hierzu
+                                                versuchen wir für unsere
+                                                Vertragsbetriebe einen fairen
+                                                Preis
+                                                umzusetzen, sodaß es möglich ist
+                                                ein
+                                                gutes tiergerechtes,
+                                                ökologisches
+                                                Premiumprodukt zu erzeugen. Der
+                                                Kunde hingegen profitiert von
+                                                unserer langfristigen und
+                                                konstanten
+                                                Preisstrategie sowie natürlich
+                                                auch
+                                                von unseren qualitativ
+                                                hochstehenden
+                                                Produkten, für welche wir
+                                                natürliche
+                                                eine lückelose
+                                                Rückverfolgbarkeit
+                                                garantieren.</p>
+                                            <div>
+                                                <br/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+        </template>
+
+        <template id="philosophie">
+                    <t t-name="website.philosophie">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="pt32 pb0" data-name="Title">
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="s_title pt16 pb0 col-lg-8" style="text-align: center;">
+                                            <h1 class="s_title_default" style="text-align: left; ">
+                                                <font style="color: rgb(57, 123, 33); font-size: 24px;">
+                                                    <b>Philosophie</b>
+                                                </font>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pt32 pb0" data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 pt0 pb0">
+                                            <p class="lead">
+                                                <font style="color: rgb(57, 123, 33);">
+                                                    <b>
+                                                        <b>Sicherheit</b>
+                                                    </b>
+                                                </font>
+                                                <br/>
+                                            </p>
+                                            <p>Die Qualität unserer Produkte und
+                                                die
+                                                Sensibilität des Marktes
+                                                verlangen
+                                                eine Vertriebsorganisation, bei
+                                                der
+                                                eine Vermischung von
+                                                konventionellen
+                                                Eiern und Bio-Eiern nicht
+                                                möglich
+                                                ist. Die Biovum GmbH verarbeitet
+                                                deshalb seit ihrer Gründung
+                                                ausschließlich biologisch
+                                                hergestellte Eier. Alle Eier
+                                                werden
+                                                auf dem Bauernhof geprintet und
+                                                der
+                                                Weg vom Landwirt bis zum Käufer
+                                                wird
+                                                in unserem
+                                                Warenwirtschaftssystem
+                                                dokumentiert. Dieses
+                                                Rückverfolgbarkeitssystem
+                                                erlaubt
+                                                uns, in kürzester Zeit auf
+                                                Probleme
+                                                zu reagieren und bietet somit
+                                                einen
+                                                optimalen Schutz für unsere
+                                                Kunden
+                                                und den Konsumenten.<br/></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pb0 pt0" data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 pt0 pb0">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33);">
+                                                        <b>Qualität</b>
+                                                    </font>
+                                                </b>
+                                                <br/>
+                                            </p>
+                                            <p>Unser Ziel ist ein möglichst
+                                                hohes
+                                                Qualitätsniveau auf allen Stufen
+                                                der
+                                                Wertschöpfungskette zu
+                                                erreichen. Um
+                                                diesem Anspruch gerecht zu
+                                                werden,
+                                                haben wir ein zertifiziertes
+                                                Qualitätsmanagementsystem
+                                                aufgebaut:
+                                                Sämtliche Arbeitsschritte werden
+                                                laufend kontrolliert, bewertet
+                                                und
+                                                gegebenenfalls angepasst. Dieses
+                                                Qualitätsmanagementsystem
+                                                entspricht
+                                                den Richtlinien der ISO 9001
+                                                sowie
+                                                dem IFS (International Food
+                                                Standard). Wir sind in der Lage,
+                                                sowohl kleine Abnehmer als auch
+                                                große Kunden mit unseren
+                                                Produkten
+                                                zu beliefern. Unsere Produkte
+                                                sind
+                                                in diversen Verpackungsgrößen
+                                                erhältlich, um kundenspezifische
+                                                Anforderungen optimal zu
+                                                erfüllen.<br/></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pt0 pb56" data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="pt0 col-lg-8 pb0">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33);">
+                                                        <b>Erfahrung</b>
+                                                    </font>
+                                                </b>
+                                                <br/>
+                                            </p>
+                                            <p>Die Biovum GmbH verfügt über
+                                                langjährige Erfahrung in der
+                                                Produktion und Vermarktung von
+                                                Bio-Eiern und Bio-Ei-Produkten.
+                                                Diese fließt ständig in unsere
+                                                Prozesse ein und hilft, diese zu
+                                                optimieren. Außerdem können wir
+                                                unsere Erzeuger optimal in der
+                                                Geflügelhaltung unterstützen und
+                                                so
+                                                gewährleisten, dass unsere Eier
+                                                die
+                                                bestmögliche Qualität
+                                                erreichen.<br/></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+        </template>
+
+        <template id="offene-stellen">
+                <t t-name="website.offene-stellen">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="pt32 pb32" data-name="Title">
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="s_title pt16 col-lg-7 pb0"
+                                             style="text-align: center;">
+                                            <h1 class="s_title_default"
+                                                style="text-align: left; ">
+                                                <font style="color: rgb(57, 123, 33); font-size: 24px;">
+                                                    <b>Offene Stellen</b>
+                                                </font>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pt0 pb0"
+                                     data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="pt32 pb32 col-lg-7">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33);">
+                                                        <b>Mitarbeiter</b>
+                                                        <b>Sortierung</b>
+                                                    </font>
+                                                </b>
+                                                <br/>
+                                            </p>
+                                            <p>Wir suchen Mitarbeiter die Freude
+                                                am
+                                                Umgang mit Lebensmitteln,
+                                                technisches Interesse sowie eine
+                                                gute Auffassungsgabe mitbringen.
+                                                Zuverlässigkeit und das
+                                                Verständnis
+                                                für die Einhaltung von
+                                                Sicherheitsvorschriften sowie
+                                                Hygienebewusstsein setzen wir
+                                                voraus. Wir arbeiten in einem
+                                                Team,
+                                                welches den Biogedanken lebt.
+                                                Trifft
+                                                das auf dich zu? Dann bewirb
+                                                dich
+                                                bei uns.</p>
+                                            <p>Schick uns gerne deine kompletten
+                                                Bewerbungsunterlagen per E-Mail,
+                                                an
+                                                Maria Egger.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+        </template>
+
+        <template id="zertifizierung">
+                <t t-name="website.zertifizierung">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="s_text_block pt32 pb0"
+                                     data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 pt0 pb0">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33);">
+                                                        <b>Zertifizierung</b>
+                                                    </font>
+                                                </b>
+                                                <br/>
+                                            </p>
+                                            <p>Als Ziel haben wir uns ein
+                                                möglichst
+                                                hohes Qualitätsniveau auf allen
+                                                Stufen der Wertschöpfungskette
+                                                gesetzt. Um diesem
+                                                Unternehmensleitspruch gerecht
+                                                zu
+                                                werden, haben wir ein
+                                                zertifiziertes
+                                                Qualitätsmanagementsystem
+                                                aufgebaut.
+                                                Hierfür werden sämtliche
+                                                Arbeitsschritte immer wieder
+                                                kontrolliert, bewertet und
+                                                gegebenenfalls angepasst.</p>
+                                            <p>Um die Qualität unserer
+                                                biologischen
+                                                Produkte, und somit eine
+                                                größtmögliche Sicherheit für
+                                                unsere
+                                                Kunden zu gewährleisten, beginnt
+                                                die
+                                                Kontrolle schon bei der
+                                                Anlieferung
+                                                der Eier. Diese setzt sich bis
+                                                zum
+                                                Verlassen unseres Unternehmens
+                                                fort.
+                                                Dafür tragen unsere
+                                                qualifizierten,
+                                                hochmotivierten Mitarbeiter
+                                                Sorge.
+                                                Zur weiteren Absicherung wurde
+                                                ein
+                                                externer QM-Berater in dieses
+                                                System
+                                                integriert.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pt0 pb0"
+                                     data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 pb0 pt0">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33);">
+                                                        <b>IFS</b>
+                                                    </font>
+                                                </b>
+                                                <br/>
+                                            </p>
+                                            <p>Der IFS (international food
+                                                standard)
+                                                baut auf der bekannten
+                                                Qualitätsmanagementnorm DIN EN
+                                                ISO
+                                                9001:2008 auf, und beinhaltet
+                                                zusätzlich die Grundsätze der
+                                                Guten
+                                                Herstellungspraxis (Reinigung,
+                                                Desinfektion,
+                                                Schädlingsbekämpfung,
+                                                Wartung, Instandhaltung und
+                                                Schulung) und HACCP. In die
+                                                Version
+                                                4 wurden zusätzlich die aktuelle
+                                                EU-Gesetzgebung hinsichtlich des
+                                                Umgangs mit Allergenen und
+                                                gentechnisch veränderten
+                                                Organismen
+                                                (GVOs) eingearbeitet.</p>
+                                            <p>Die seit 1. Januar 2008 gültige
+                                                Version 5 ist eine modifizierte
+                                                Version, in der die
+                                                Anforderungen
+                                                klarer ausformuliert, aber auch
+                                                zusätzliche sog. K.O.-Kriterien
+                                                eingeführt wurden. Zudem wurde
+                                                die
+                                                Bewertungssystematik
+                                                geändert.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pb32 pt0"
+                                     data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="pb32 pt0 col-lg-8">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33);">
+                                                        <b>Bio</b>
+                                                        <b>Zertifizierung</b>
+                                                    </font>
+                                                </b>
+                                                <br/>
+                                            </p>
+                                            <p>Ein Bio-Siegel ist ein Güte- und
+                                                Prüfsiegel, mit welchem
+                                                Erzeugnisse
+                                                aus ökologischem Landbau
+                                                gekennzeichnet werden.</p>
+                                            <p>Die Genehmigung zur Verwendung
+                                                eines
+                                                Siegels wird vom Herausgeber
+                                                reglementiert und ist an die
+                                                Einhaltung gewisser Standards
+                                                und
+                                                Auflagen geknüpft. Die
+                                                Einhaltung
+                                                der Kriterien durch die Erzeuger
+                                                soll durch eine
+                                                Dokumentationspflicht sowie
+                                                regelmäßige Entnahme und
+                                                Untersuchung von Warenproben
+                                                gewährleistet werden. Überwacht
+                                                wird
+                                                die Einhaltung der Bestimmungen
+                                                für
+                                                alle Bio-Produkte in der EU
+                                                durch
+                                                die jeweils zuständige
+                                                Öko-Kontrollstelle, bei
+                                                Verwendung
+                                                eines Verbandssiegels zusätzlich
+                                                durch den jeweiligen
+                                                Anbauverband.</p>
+                                            <p>Unsere Kontrollstelle ist die
+                                                ABCert
+                                                (DE-ÖKO 006), weiter haben wir
+                                                Verbandsverträge mit Bioland,
+                                                Naturland und dem Biokreis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+        </template>
+
+        <template id="partner">
+                <t t-name="website.partner">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="s_text_block pt32 pb32"
+                                     data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="pt32 pb0 col-lg-8">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33); font-size: 24px;"><b>
+                                                        Partner</b> / <b>
+                                                        Links</b></font>
+                                                </b>
+                                                <br/>
+                                            </p>
+                                            <p>Hier finden Sie einige
+                                                Interessante
+                                                Links.<br/></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_comparisons pt0 pb0"
+                                     data-name="Comparisons">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="s_col_no_bgcolor text-center col-lg-4 pt8 pb0"
+                                             data-name="Box">
+                                            <div class="card bg-200">
+                                                <div class="card-body text-center">
+                                                    <h2 class="card-title">
+                                                        <span class="s_comparisons_currency">
+                                                            <b>
+                                                                <font style="color: rgb(57, 123, 33); font-size: 18px;">
+                                                                    Bioland</font>
+                                                            </b>
+                                                            <b>
+                                                                <font style="color: rgb(57, 123, 33); font-size: 18px;">
+                                                                    <br/>
+                                                                    <div style="text-align: left;">
+                                                                        <span style="font-size: 14px; font-weight: 500; color: rgb(33, 37, 41);">
+                                                                            &amp;nbsp;
+                                                                            Bioland
+                                                                            ist
+                                                                            der
+                                                                            größte
+                                                                            und
+                                                                            bekannteste
+                                                                            Bioverband.
+                                                                            Hier
+                                                                            finden
+                                                                            Sie
+                                                                            alle
+                                                                            Informationen
+                                                                            über
+                                                                            den
+                                                                            Biolandbau.&amp;nbsp;</span>
+                                                                    </div>
+                                                                </font>
+                                                            </b>
+                                                        </span>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s_col_no_bgcolor text-center pt16 col-lg-4 pb0"
+                                             data-name="Box">
+                                            <div class="card bg-primary">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item"
+                                                        style="text-align: left; ">
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; <font
+                                                            style="color: rgb(57, 123, 33); font-size: 18px;"><b>
+                                                        Bio mit Gesicht&amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp;</b></font>&amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;Hier
+                                                        können Sie anhand der
+                                                        Nummer
+                                                        auf dem Ei bzw. auf&amp;nbsp;
+                                                        dem Produkt
+                                                        zurückverfolgen
+                                                        woher dieses kommt.&amp;nbsp;&amp;nbsp;</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="s_col_no_bgcolor text-center pt16 pb16 col-lg-4"
+                                             data-name="Box">
+                                            <div class="card bg-secondary">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item"
+                                                        style="text-align: left; ">
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;&amp;nbsp;<b><font
+                                                            style="color: rgb(57, 123, 33); font-size: 18px;">
+                                                        Was steht auf dem Ei&amp;nbsp;
+                                                        &amp;nbsp;&amp;nbsp;</font></b>&amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp;Dies ist die
+                                                        Internetseite des KAT
+                                                        e.V. .
+                                                        Auf dieser gibt es die
+                                                        Möglichkeit anhand der
+                                                        Printnummer
+                                                        herauszufinden
+                                                        wo Ihr Ei her kommt.
+                                                        Unabhängig von der
+                                                        Haltungsform.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="s_col_no_bgcolor text-center col-lg-4 pt0 pb128"
+                                             data-name="Box">
+                                            <div class="card bg-secondary">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="o_indent">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="o_indent">
+                                                                <ul class="list-group list-group-flush">
+                                                                    <li class="list-group-item"
+                                                                        style="text-align: left; "><font
+                                                                            style="color: rgb(57, 123, 33); font-size: 18px;"><b>
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;Futter</b></font><span
+                                                                            style="text-align: left;">
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp; </span><span
+                                                                            style="text-align: left;">
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp; </span>
+                                                                        Eine Bio
+                                                                        Legehenne
+                                                                        legt
+                                                                        dann
+                                                                        geschmackvolle
+                                                                        Eier,
+                                                                        wenn&amp;nbsp;
+                                                                        sie
+                                                                        täglich
+                                                                        mit
+                                                                        gutem
+                                                                        Futter
+                                                                        versorgt
+                                                                        wird.
+                                                                        Das
+                                                                        Futter
+                                                                        muss
+                                                                        die
+                                                                        Bedürnisse
+                                                                        der
+                                                                        Hennen
+                                                                        optimal
+                                                                        abdecken
+                                                                        können.&amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        &amp;nbsp;
+                                                                        Folgende
+                                                                        Partner
+                                                                        beliefern
+                                                                        unsere
+                                                                        Legehennehalter
+                                                                        mit
+                                                                        hochstehendem
+                                                                        Futter:&amp;nbsp;
+                                                                        Meika
+                                                                        Tierernährung</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="s_col_no_bgcolor text-center pb16 col-lg-4 pt0"
+                                             data-name="Box">
+                                            <div class="card bg-white-75">
+                                                <ul class="list-group list-group-flush">
+                                                    <span style="background-color: rgb(255, 255, 255); color: rgb(57, 123, 33); font-size: 18px; text-align: left;">
+                                                        <b>&amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp;Campact&amp;nbsp;
+                                                            &amp;nbsp; &amp;nbsp;
+                                                            &amp;nbsp; </b>
+                                                        <b>&amp;nbsp;</b>
+                                                    </span>
+                                                    <span style="background-color: rgb(255, 255, 255); color: rgb(33, 37, 41); font-size: 18px; text-align: left;">
+                                                        <b></b>
+                                                    </span>
+                                                    <span style="text-align: left; color: rgb(33, 37, 41); background-color: rgb(255, 255, 255);">
+                                                        &amp;nbsp; Eine Bio
+                                                        Legehenne legt dann
+                                                        geschmackvolle Eier,
+                                                        wenn&amp;nbsp;
+                                                        sie täglich mit gutem
+                                                        Futter
+                                                        versorgt wird. Das
+                                                        Futter
+                                                        muss die Bedürnisse der
+                                                        Hennen optimal abdecken
+                                                        können.&amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp;</span>
+                                                </ul>
+                                                <ul class="list-group list-group-flush">
+                                                    <span style="text-align: left; color: rgb(33, 37, 41); background-color: rgb(255, 255, 255);"></span>
+                                                </ul>
+                                                <ul class="list-group list-group-flush">
+                                                    <span style="text-align: left; color: rgb(33, 37, 41); background-color: rgb(255, 255, 255);">
+                                                        &amp;nbsp; Folgende
+                                                        Partner
+                                                        beliefern unsere
+                                                        Legehennehalter mit
+                                                        hochstehendem Futter:&amp;nbsp;
+                                                        Meika
+                                                        Tierernährung</span>
+                                                </ul>
+                                                <br/>
+                                                <br/>
+                                            </div>
+                                        </div>
+                                        <div class="s_col_no_bgcolor text-center pt16 pb16 col-lg-4"
+                                             data-name="Box">
+                                            <div class="card bg-secondary">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item"
+                                                        style="text-align: left; ">
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;<font
+                                                            style="color: rgb(57, 123, 33); font-size: 18px;"><b>
+                                                        Hosberg AG&amp;nbsp;
+                                                        &amp;nbsp;</b></font>&amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        &amp;nbsp; &amp;nbsp;
+                                                        &amp;nbsp;
+                                                        Hosberg AG ist unser
+                                                        Partnerunternehmen in
+                                                        der
+                                                        Schweiz. Weiter werden
+                                                        unsere
+                                                        Flüssigei-Produkte
+                                                        hier hergestellt. Hier
+                                                        handelt es sich wie auch
+                                                        bei
+                                                        der Biovum GmbH um ein
+                                                        reines
+                                                        Bio-Unternehmen.d</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+        </template>
+
+
+        <template id="messen">
+                <t t-name="website.messen">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="pt32 pb0" data-name="Title">
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="s_title pt16 pb16 col-lg-8" style="text-align: center;">
+                                            <h1 class="s_title_default" style="text-align: left; ">
+                                                <font style="color: rgb(57, 123, 33); font-size: 24px;">
+                                                    <b>Messen</b>
+                                                </font>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pt32 pb32" data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 pt0 pb0">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33);">
+                                                        <b>Biofach</b>
+                                                        <b>Nürnberg</b>
+                                                    </font>
+                                                </b>
+                                                <br/>
+                                            </p>
+                                            <p>anschauen und eintauchen!</p>
+                                            <p>Das Nürnberger Messezentrum wird
+                                                zur
+                                                weltgrößten Plattform für die
+                                                Bio-Branche. Zuletzt trafen sich
+                                                2.557 Aussteller und 43.669
+                                                Fachbesucher zu BioFach,
+                                                Weltleitmesse für Bio-Produkte,
+                                                und
+                                                der parallel stattfindenden
+                                                Vivaness, Leitmesse für
+                                                Naturkosmetik und Wellness. Die
+                                                Biofach ist somit die größte
+                                                Bio-Messe der Welt.</p>
+                                            <p>Auch dieses Jahr sind wir wieder
+                                                mit
+                                                unserem Team auf der Messe
+                                                vertreten
+                                                und freuen uns auf Ihren Besuch
+                                                am
+                                                Messestand.</p>
+                                            <p>Weiter Informationen zur Messe:
+                                                Biofach Homepage</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pb32 pt0" data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="pb32 col-lg-8 pt0">
+                                            <p class="lead">
+                                                <font style="color: rgb(57, 123, 33);">
+                                                    <b>
+                                                        <b>Südback</b>
+                                                    </b>
+                                                </font>
+                                                <br/>
+                                            </p>
+                                            <p>Die südback ist eine der
+                                                begehrtesten
+                                                und wichtigsten Trendmessen für
+                                                das
+                                                Bäcker- und Konditorenhandwerk
+                                                in
+                                                Deutschland. Sie ist die
+                                                Drehscheibe
+                                                für den Austausch von Ideen,
+                                                Meinungen und Informationen
+                                                sowie
+                                                für die Präsentation von Trends,
+                                                Entwicklungen und technischen
+                                                Innovationen.</p>
+                                            <p>Gerne erwarten wir Sie mit
+                                                unserem
+                                                Team auf unserem Messestand.</p>
+                                            <p class="o_default_snippet_text">
+                                                Weiter</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+        </template>
+
+        <template id="aktuelles">
+            <t t-name="bands.aktuelles">
+                <t t-name="website.aktuelles">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="pt32 pb32" data-name="Title">
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="s_title pt16 pb16 col-lg-8"
+                                             style="text-align: center;">
+                                            <h1 class="s_title_default"
+                                                style="text-align: left; ">
+                                                <font style="color: rgb(57, 123, 33); font-size: 24px;">
+                                                    <b>Aktuelles</b>
+                                                </font>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pt0 pb0"
+                                     data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="pb32 pt0 col-lg-8">
+                                            <p class="lead">
+                                                <span style="">
+                                                    <b>
+                                                        <font style="color: rgb(57, 123, 33);">
+                                                            <b>Projekt</b>
+                                                            <b>Sandy</b>
+                                                        </font>
+                                                    </b>
+                                                    <b>
+                                                        <font style="color: rgb(57, 123, 33);">
+                                                            <b>
+                                                                <br/>
+                                                            </b>
+                                                        </font>
+                                                    </b>
+                                                </span>
+                                                <br/>
+                                                <span style="font-size: 14px;">
+                                                    Das
+                                                    Projekt Sandy. Um ein
+                                                    Zeichen
+                                                    gegen
+                                                    das sinnlose Töten von Küken
+                                                    zu
+                                                    setzen haben wir uns
+                                                    entschieden
+                                                    mit
+                                                    diesem Projekt die
+                                                    männlichen
+                                                    Tiere
+                                                    mit auf zu ziehen.
+                                                    Unterstützen
+                                                    Sie
+                                                    uns bei diesem Projekt damit
+                                                    wir
+                                                    dem
+                                                    Ziel das sinnlose Kükentöten
+                                                    zu
+                                                    beenden näher kommen.&amp;nbsp;
+                                                    mehr</span>
+                                                <br/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pt0 pb56"
+                                     data-name="Text block">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 pb32 pt0">
+                                            <p class="lead">
+                                                <b>
+                                                    <font style="color: rgb(57, 123, 33);">
+                                                        <b>Fipronil</b>
+                                                    </font>
+                                                    <br/>
+                                                </b>
+                                            </p>
+                                            <p>Unsere Betriebe sind von diesem
+                                                Skandal
+                                                nicht betroffen.</p>
+                                            <p>Hier unsere aktuelle
+                                                Stellungnahme
+                                                zum
+                                                Fipronil Skandal.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template priority="100" id="new_header" inherit_id="website.layout">
+            <xpath expr="//header//ul[@id='top_menu']/li" position="after">
+                <div>
+                    <li class="nav-item dropdown">
+                        <a data-toggle="dropdown" href="#"
+                           class="nav-link dropdown-toggle ">
+                            <span data-oe-model="website.menu" data-oe-id="31"
+                                  data-oe-field="name" data-oe-type="char"
+                                  data-oe-expression="submenu.name"
+                                  data-oe-field-xpath="/t[1]/li[2]/a[1]/span[1]">
+                                Über uns</span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+
+
+                            <li class="">
+                                <a role="menuitem" href="/uber-uns/geschichte"
+                                   class="dropdown-item ">
+                                    <span data-oe-model="website.menu"
+                                          data-oe-id="32" data-oe-field="name"
+                                          data-oe-type="char"
+                                          data-oe-expression="submenu.name">
+                                        Geschichte</span>
+                                </a>
+                            </li>
+
+
+                            <li class="">
+                                <a role="menuitem" href="/uber-uns/philosophie"
+                                   class="dropdown-item ">
+                                    <span data-oe-model="website.menu"
+                                          data-oe-id="33" data-oe-field="name"
+                                          data-oe-type="char"
+                                          data-oe-expression="submenu.name">
+                                        Philosophie</span>
+                                </a>
+                            </li>
+
+
+                            <li class="">
+                                <a role="menuitem"
+                                   href="/uber-uns/offene-stellen"
+                                   class="dropdown-item ">
+                                    <span data-oe-model="website.menu"
+                                          data-oe-id="34" data-oe-field="name"
+                                          data-oe-type="char"
+                                          data-oe-expression="submenu.name">
+                                        Offene Stellen</span>
+                                </a>
+                            </li>
+
+
+                            <li class="">
+                                <a role="menuitem"
+                                   href="/uber-uns/zertifizierung"
+                                   class="dropdown-item ">
+                                    <span data-oe-model="website.menu"
+                                          data-oe-id="35" data-oe-field="name"
+                                          data-oe-type="char"
+                                          data-oe-expression="submenu.name">
+                                        Zertifizierung</span>
+                                </a>
+                            </li>
+
+
+                            <li class="">
+                                <a role="menuitem" href="/uber-uns/partner"
+                                   class="dropdown-item ">
+                                    <span data-oe-model="website.menu"
+                                          data-oe-id="36" data-oe-field="name"
+                                          data-oe-type="char"
+                                          data-oe-expression="submenu.name">
+                                        Partner </span>
+                                </a>
+                            </li>
+
+
+                            <li class="">
+                                <a role="menuitem" href="/messen"
+                                   class="dropdown-item ">
+                                    <span data-oe-model="website.menu"
+                                          data-oe-id="37" data-oe-field="name"
+                                          data-oe-type="char"
+                                          data-oe-expression="submenu.name">
+                                        Messen</span>
+                                </a>
+                            </li>
+
+
+                            <li class="">
+                                <a role="menuitem" href="/uber-uns/aktuelles"
+                                   class="dropdown-item ">
+                                    <span data-oe-model="website.menu"
+                                          data-oe-id="38" data-oe-field="name"
+                                          data-oe-type="char"
+                                          data-oe-expression="submenu.name">
+                                        Aktuelles</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                </div>
+            </xpath>
+        </template>
+
+        <template priority="100" id="new_footer" inherit_id="website.layout">
+            <xpath expr="//footer" position="replace">
+                <div id="footer" class="oe_structure oe_structure_solo"
+                     t-ignore="true" t-if="not no_footer">
+                    <section class="s_text_block pb8 pt0"
+                             data-name="Text block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h5><wtf>Our</wtf> Products &amp;amp;
+                                        Services</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="/" data-original-title=""
+                                               title=""
+                                               aria-describedby="tooltip256744">
+                                                Kommunikationsagentur</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4" id="connect">
+                                    <h5>Connect with us</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="/contactus">Contact us</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-phone"/>
+                                            <span class="o_force_ltr"><p>+49 (0) 82 65 / 22 60 00</p></span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-envelope"/>
+                                            <span class="o_force_ltr"><p>Email</p></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h5>
+                                        <span t-field="res_company.name"/>
+                                        <a href="http://localhost:8069/aboutus"
+                                           data-original-title="" title=""
+                                           aria-describedby="tooltip33856"
+                                           style="font-size: 14px; background-color: rgb(249, 249, 249); color: rgb(0, 84, 82); text-decoration-line: underline;">
+                                            Adress</a>
+                                    </h5>
+                                    <p>Gewerbepark 11</p>
+                                    <p>87775 Salgen<br/></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </xpath>
+        </template>
+
+
+        <!--        <template id="musician_edit">-->
+<!--            <t t-call="website.layout">-->
+<!--                <t t-set="title">Musicians</t>-->
+<!--                <div class="oe_structure">-->
+<!--                    <div class="container">-->
+<!--                        <t t-foreach="musicians" t-as="musician">-->
+<!--                            <p><a t-attf-href="/bands/{{ slug(musician) }}">-->
+<!--                                <t t-esc="musician.name"/></a>-->
+<!--                            </p>-->
+<!--                        </t>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </t>-->
+<!--        </template>-->
+
+<!--        <template id="biography">-->
+<!--            <t t-call="website.layout">-->
+<!--                <t t-set="title">Musicians</t>-->
+<!--                <div class="oe_structure"/>-->
+<!--                <div class="oe_structure">-->
+<!--                    <div class="container">-->
+<!--                        <h3 t-field="person.name"/>-->
+<!--                        <div t-field="person.biography"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="oe_structure"/>-->
+<!--            </t>-->
+<!--        </template>-->
+
+        <!--
+                <template id="listing">
+                  <ul>
+                    <li t-foreach="objects" t-as="object">
+                      <a t-attf-href="#{ root }/objects/#{ object.id }">
+                        <t t-esc="object.display_name"/>
+                      </a>
+                    </li>
+                  </ul>
+                </template>
+                <template id="object">
+                  <h1><t t-esc="object.display_name"/></h1>
+                  <dl>
+                    <t t-foreach="object._fields" t-as="field">
+                      <dt><t t-esc="field"/></dt>
+                      <dd><t t-esc="object[field]"/></dd>
+                    </t>
+                  </dl>
+                </template>
+        -->
     </data>
 </odoo>
